@@ -134,7 +134,11 @@ const internPromt = () => {
 const makeTeam = () => {
     console.log("team done");
     // console.log(teamArray);
-    generateHtml(teamArray);
+    const htmlPageContent = generateHtml(teamArray);
+
+    //fs.writeFile("../dist/index.html", htmlPageContent, (err) =>
+    //     err ? console.log(err) : console.log("Successfully created index.html!")
+    // );
 };
 function init() {
     managerPromt();
