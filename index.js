@@ -11,21 +11,23 @@ const teamArray = [];
 const managerQuestions = [
     {
         type: "input",
-        name: "name",
-        message: "Enter  the name of  manager of the team ?",
-    },
-    {
-        type: "number",
         name: "id",
         message: "Please enter manager ID",
     },
+
+    {
+        type: "input",
+        name: "name",
+        message: "Enter  the name of  manager of the team ?",
+    },
+
     {
         type: "input",
         name: "email",
         message: "Enter Managers Email",
     },
     {
-        type: "number",
+        type: "input",
         name: "officenumber",
         message: "Enter Manager office number",
     },
@@ -33,19 +35,20 @@ const managerQuestions = [
 
 const engineerQuestions = [
     {
+        type: "number",
+        name: "id",
+        message: "Enter engineer id",
+    },
+
+    {
         type: "input",
-        name: "engname",
+        name: "name",
         message: "Enter the name of engineer",
     },
 
     {
-        type: "number",
-        name: "engid",
-        message: "Enter engineer id",
-    },
-    {
         type: "input",
-        name: "engemail",
+        name: "email",
         message: "Enter engineer email address",
     },
     {
@@ -57,22 +60,22 @@ const engineerQuestions = [
 const internQuestions = [
     {
         type: "number",
-        name: "internid",
+        name: "id",
         message: "Enter intern ID",
     },
     {
         type: "name",
-        name: "internname",
+        name: "name",
         message: "Enter intern Name",
     },
     {
         type: "input",
-        name: "internemail",
+        name: "email",
         message: "Enter intern email address",
     },
     {
         type: "input",
-        name: "internschool",
+        name: "school",
         message: "Enter intern school",
     },
 ];
@@ -109,25 +112,25 @@ const managerPromt = () => {
         const { name, id, email, officenumber } = response;
         const manager = new Manager(id, name, email, officenumber);
         teamArray.push(manager);
-        console.log(teamArray);
+        // console.log(teamArray);
         nextEmployee();
     });
 };
 const engineerPromt = () => {
     inquirer.prompt(engineerQuestions).then((response) => {
-        const { engname, engid, engemail, github } = response;
-        const engineer = new Engineer(engid, engname, engemail, github);
+        const { name, id, email, github } = response;
+        const engineer = new Engineer(id, name, email, github);
         teamArray.push(engineer);
-        console.log(teamArray);
+        //  console.log(teamArray);
         nextEmployee();
     });
 };
 const internPromt = () => {
     inquirer.prompt(internQuestions).then((response) => {
-        const { internname, internid, internemail, internschool } = response;
-        const intern = new Intern(internid, internname, internemail, internschool);
+        const { name, id, email, school } = response;
+        const intern = new Intern(id, name, email, school);
         teamArray.push(intern);
-        console.log(teamArray);
+        //  console.log(teamArray);
         nextEmployee();
     });
 };
@@ -135,10 +138,10 @@ const makeTeam = () => {
     console.log("team done");
     // console.log(teamArray);
     const htmlPageContent = generateHtml(teamArray);
-
-    //fs.writeFile("../dist/index.html", htmlPageContent, (err) =>
-    //     err ? console.log(err) : console.log("Successfully created index.html!")
-    // );
+    // console.log(htmlPageContent);
+    fs.writeFile("./dist/index.html", htmlPageContent, (err) =>
+        err ? console.log(err) : console.log("Successfully created index.html!")
+    );
 };
 function init() {
     managerPromt();
