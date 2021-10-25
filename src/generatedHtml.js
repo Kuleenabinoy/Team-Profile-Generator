@@ -5,8 +5,9 @@ const generateManager = (manager) => {
    <div class="card-header">
     
     <h3>${manager.name}</h3>
-    <h4>Manager</h4>
-    </div>
+    <h4>Manager<img class="employeeImage" src="./images/manager.png" alt="managericon"></h4>
+    
+     </div>
         <div class="card-body">
         <p class="id">ID:${manager.id}</p>
         <p class="email">Email:<a herf="mailto:${manager.email}">${manager.email}</a></p>
@@ -20,10 +21,10 @@ const generateEngineer = (engineer) => {
     return `
  
   <div class="col-4 mt-4">
-        <div class="card h-100">
+ <div class="card h-100">
     <div class="card-header">
     <h3>${engineer.name}</h3>
-    <h4>Engineer</h4>
+    <h4>Engineer<img class="employeeImage" src="./images/software-engineer.png" alt="engicon"></h4>
     </div>
         <div class="card-body">
         <p class="id">ID:${engineer.id}</p>
@@ -42,7 +43,7 @@ const generateIntern = (intern) => {
         <div class="card h-100">
         <div class="card-header" >
         <h3>${intern.name}</h3>
-        <h4>Intern</h4>
+        <h4>Intern<img class="employeeImage" src="./images/intern.png" alt="internicon"></h4>
         </div>
             <div class="card-body">
             <p class="id">ID:${intern.id}</p>
