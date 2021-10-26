@@ -6,6 +6,7 @@ const Employee = require("./lib/Employee");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const Manager = require("./lib/Manager");
+const chalk = require("chalk");
 
 const teamArray = [];
 const managerQuestions = [
@@ -13,6 +14,14 @@ const managerQuestions = [
         type: "input",
         name: "id",
         message: "Please enter manager ID",
+        validate: function (id) {
+            if (isNaN(id)) {
+                console.log(chalk.red("\nPlease enter a number"));
+                return false;
+            } else {
+                return true;
+            }
+        },
     },
 
     {
@@ -34,7 +43,7 @@ const managerQuestions = [
             if (valid) {
                 return true;
             } else {
-                console.log("\n E-mail address  you entered is wrong.\n");
+                console.log(chalk.red("\n E-mail address  you entered is wrong.\n"));
                 return false;
             }
         },
@@ -48,9 +57,17 @@ const managerQuestions = [
 
 const engineerQuestions = [
     {
-        type: "number",
+        type: "input",
         name: "id",
         message: "Enter engineer id",
+        validate: function (id) {
+            if (isNaN(id)) {
+                console.log(chalk.red("\nPlease enter a number"));
+                return false;
+            } else {
+                return true;
+            }
+        },
     },
 
     {
@@ -72,7 +89,7 @@ const engineerQuestions = [
             if (valid) {
                 return true;
             } else {
-                console.log("\n E-mail address  you entered is wrong.\n");
+                console.log(chalk.red("\n E-mail address  you entered is wrong.\n"));
                 return false;
             }
         },
@@ -85,9 +102,17 @@ const engineerQuestions = [
 ];
 const internQuestions = [
     {
-        type: "number",
+        type: "input",
         name: "id",
         message: "Enter intern ID",
+        validate: function (id) {
+            if (isNaN(id)) {
+                console.log(chalk.red("\nPlease enter a number"));
+                return false;
+            } else {
+                return true;
+            }
+        },
     },
     {
         type: "name",
@@ -107,7 +132,7 @@ const internQuestions = [
             if (valid) {
                 return true;
             } else {
-                console.log("\n E-mail address  you entered is wrong.\n");
+                console.log(chalk.red("\n E-mail address  you entered is wrong.\n"));
                 return false;
             }
         },
@@ -179,7 +204,7 @@ const makeTeam = () => {
     const htmlPageContent = generateHtml(teamArray);
     // console.log(htmlPageContent);
     fs.writeFile("./dist/index.html", htmlPageContent, (err) =>
-        err ? console.log(err) : console.log("Successfully created index.html!")
+        err ? console.log(err) : console.log(chalk.blue("Successfully created index.html!"))
     );
 };
 function init() {
