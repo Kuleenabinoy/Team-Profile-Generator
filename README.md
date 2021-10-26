@@ -58,9 +58,16 @@ Run `npm test` to run Jest for tests
 ```
 
 ## ScreenShots
+
 ![Screenshot 2021-10-26 12 40 35](https://user-images.githubusercontent.com/86656634/138794641-f76e1882-b681-40c1-9382-46a9584f0b31.png)
 
 ![Screenshot 2021-10-26 12 47 43](https://user-images.githubusercontent.com/86656634/138794806-4a3c211b-f140-474b-8520-e249395229d7.png)
 
-
 ## VideoLinks
+
+1.  TDD Video
+    The walkthrough video showing all four tests passing from the command line.
+
+2.  The walkthrough video demonstrating how a user would invoke the application from the command line and how a user would enter responses to all of the prompts in the application.
+
+3.The walkthrough video demonstrating a generated HTML file that matches the user input.
