@@ -9,9 +9,7 @@ A Node.js command-line application that takes in information about employees on 
 -   [Description](#Description)
 -   [UserStory](#UserStory)
 -   [AcceptanceCriteria](#AcceptanceCriteria)
-
-*   [Usage](#Usage)
-
+-   [Usage](#Usage)
 -   [Tests](#Tests)
 -   [ScreenShots](#ScreenShots)
 -   [VideoLinks](#VideoLinks)
@@ -48,12 +46,16 @@ THEN I exit the application, and the HTML is generated
 
 ## Usage
 
+```md
 Npm Module Inquirer is used for prompt questions from command line
 Npm Module Chalk is used to display Validation messages and other messages .
+```
 
 ## Tests
 
+```md
 Run `npm test` to run Jest for tests
+```
 
 ## ScreenShots
 
