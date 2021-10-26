@@ -9,10 +9,12 @@ A Node.js command-line application that takes in information about employees on 
 -   [Description](#Description)
 -   [UserStory](#UserStory)
 -   [AcceptanceCriteria](#AcceptanceCriteria)
+
+*   [Usage](#Usage)
+
 -   [Tests](#Tests)
 -   [ScreenShots](#ScreenShots)
 -   [VideoLinks](#VideoLinks)
--   [Questions](#Questions)
 
 ## UserStory
 
@@ -43,3 +45,16 @@ THEN I am prompted to enter the intern’s name, ID, email, and school, and I am
 WHEN I decide to finish building my team
 THEN I exit the application, and the HTML is generated
 ```
+
+## Usage
+
+Npm Module Inquirer is used for prompt questions from command line
+Npm Module Chalk is used to display Validation messages and other messages .
+
+## Tests
+
+Run `npm test` to run Jest for tests
+
+## ScreenShots
+
+## VideoLinks
