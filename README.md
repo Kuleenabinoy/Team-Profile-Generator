@@ -65,9 +65,14 @@ Run `npm test` to run Jest for tests
 
 ## VideoLinks
 
-1.  TDD Video
-    The walkthrough video showing all four tests passing from the command line.
+1.Video showing all four tests passing from the command line.
 
-2.  The walkthrough video demonstrating how a user would invoke the application from the command line and how a user would enter responses to all of the prompts in the application.
+https://watch.screencastify.com/v/oIKxgthL4T5x9xT0sdym
 
-3.The walkthrough video demonstrating a generated HTML file that matches the user input.
+2.Video demonstrating how a user would invoke the application from the command line and how a user would enter responses to all of the prompts in the application.
+https://watch.screencastify.com/v/aKbfmDzw6yIS8gpuMDbG
+
+3.Video demonstrating a generated HTML file that matches the user input.
+https://watch.screencastify.com/v/nxiLUSIOyU0mRkGz4fyC
+
+4.Video demonstrating all functions Of the project Test,Commandline prompts,Validation,Html Generation, Html Page

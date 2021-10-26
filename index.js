@@ -1,4 +1,5 @@
 const inquirer = require("inquirer");
+const chalk = require("chalk");
 const fs = require("fs");
 const generateHtml = require("./src/generatedHtml");
 
@@ -6,7 +7,6 @@ const Employee = require("./lib/Employee");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const Manager = require("./lib/Manager");
-const chalk = require("chalk");
 
 const teamArray = [];
 const managerQuestions = [
@@ -149,7 +149,7 @@ const selectnextEmployee = [
         type: "list",
         name: "nextEmployee",
         message: "Select employee role",
-        choices: ["Engineer", "Intern", "Team Done"],
+        choices: ["Engineer", "Intern", "Finish Building Team"],
     },
 ];
 const nextEmployee = () => {
@@ -164,7 +164,7 @@ const nextEmployee = () => {
             case "Intern":
                 internPromt();
                 break;
-            case "Team Done":
+            case "Finish Building Team":
                 makeTeam();
                 break;
         }
@@ -199,7 +199,7 @@ const internPromt = () => {
     });
 };
 const makeTeam = () => {
-    console.log("team done");
+    //  console.log("team done");
     // console.log(teamArray);
     const htmlPageContent = generateHtml(teamArray);
     // console.log(htmlPageContent);
