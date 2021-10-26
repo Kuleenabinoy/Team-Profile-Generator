@@ -60,6 +60,7 @@ Run `npm test` to run Jest for tests
 ## ScreenShots
 ![Screenshot 2021-10-26 12 40 35](https://user-images.githubusercontent.com/86656634/138794641-f76e1882-b681-40c1-9382-46a9584f0b31.png)
 
-![Screenshot 2021-10-26 12 42 15](https://user-images.githubusercontent.com/86656634/138794657-9791c614-c2e1-4037-be03-0fdfbf3dec0c.png)
+![Screenshot 2021-10-26 12 47 43](https://user-images.githubusercontent.com/86656634/138794806-4a3c211b-f140-474b-8520-e249395229d7.png)
+
 
 ## VideoLinks
