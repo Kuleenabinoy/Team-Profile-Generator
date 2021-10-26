@@ -20,6 +20,11 @@ body{
     font-size: 25px;
     
 }
+ .card{
+    width: 200px;
+    
+    border:2px solid black
+} 
 .card-body{
     
     color: black   
@@ -28,9 +33,11 @@ body{
 
 #team-cards{
     margin-top: 10px;
+
 }
 .container{
-    margin: 50px auto;
+    
+    margin: 100px auto;
     justify-content: space-evenly;
     display: flex;
     

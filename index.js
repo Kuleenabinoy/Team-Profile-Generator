@@ -25,6 +25,19 @@ const managerQuestions = [
         type: "input",
         name: "email",
         message: "Enter Managers Email",
+        validate: function (email) {
+            // mail check (return true if valid mail)
+            valid =
+                /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()\.,;\s@\"]+\.{0,1})+([^<>()\.,;:\s@\"]{2,}|[\d\.]+))$/.test(
+                    email
+                );
+            if (valid) {
+                return true;
+            } else {
+                console.log("\n E-mail address  you entered is wrong.\n");
+                return false;
+            }
+        },
     },
     {
         type: "input",
@@ -50,6 +63,19 @@ const engineerQuestions = [
         type: "input",
         name: "email",
         message: "Enter engineer email address",
+        validate: function (email) {
+            // mail check (return true if valid mail)
+            valid =
+                /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()\.,;\s@\"]+\.{0,1})+([^<>()\.,;:\s@\"]{2,}|[\d\.]+))$/.test(
+                    email
+                );
+            if (valid) {
+                return true;
+            } else {
+                console.log("\n E-mail address  you entered is wrong.\n");
+                return false;
+            }
+        },
     },
     {
         type: "input",
@@ -72,6 +98,19 @@ const internQuestions = [
         type: "input",
         name: "email",
         message: "Enter intern email address",
+        validate: function (email) {
+            // mail check (return true if valid mail)
+            valid =
+                /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()\.,;\s@\"]+\.{0,1})+([^<>()\.,;:\s@\"]{2,}|[\d\.]+))$/.test(
+                    email
+                );
+            if (valid) {
+                return true;
+            } else {
+                console.log("\n E-mail address  you entered is wrong.\n");
+                return false;
+            }
+        },
     },
     {
         type: "input",
